@@ -1,49 +1,51 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <!-- index.html -->
- <!-- Displays an h:dataTable of the addresses in the address book -->
+<!-- Displays an h:dataTable of the addresses in the address book -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
- <html xmlns="http://www.w3.org/1999/xhtml"
- xmlns:h="http://java.sun.com/jsf/html"
- xmlns:f="http://java.sun.com/jsf/core">
- <h:head>
- <title>Siparis</title>
- </h:head>
- <h:body>
- <h3>Sipariş Detayı</h3>
- <small> (Lütfen gelen verilerin doğruluğunu Netbeans sample veritabanına gidip Purchase_Order tablosundan
-    kontrol ediniz)</small>
-  <h:dataTable value="#{siparisler.bul()}" var="myvariable"
- border="1" cellpadding="10" cellspacing="3" >
- 
-     <h:column>
-<f:facet name="header">Sipariş No</f:facet>
-#{myvariable.order_num}
-</h:column>
- <h:column>
- <f:facet name="header">Müşteri No</f:facet>
- #{myvariable.customer_id}
-  </h:column>
- <h:column>
- <f:facet name="header">Müşteri Adı</f:facet>
- #{myvariable.name}
- </h:column>
-     <h:column>
- <f:facet name="header">Alınan Ürün</f:facet>
- #{myvariable.description}
- </h:column>
- <h:column>
- <f:facet name="header">Alınan Adet</f:facet>
- #{myvariable.quantity}
- </h:column>
- <h:column>
- <f:facet name="header">Sipariş Tarihi</f:facet>
- #{myvariable.sales_date}
- </h:column>
-          
- </h:dataTable>
- <h:form>
-      <h:commandButton value="Geri" action="index"/></h:form>
- </h:body>
- </html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>Siparis</title>
+</h:head>
+<h:body>
+    <h3>Sipariş Detayı</h3>
+    <small> (Lütfen gelen verilerin doğruluğunu Netbeans sample veritabanına gidip Purchase_Order tablosundan
+       kontrol ediniz)</small>
+    
+    <h:dataTable value="#{siparisler.bul()}" var="myvariable"
+    border="1" cellpadding="10" cellspacing="3" >
+
+        <h:column>
+            <f:facet name="header">Sipariş No</f:facet>
+            #{myvariable.order_num}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Müşteri No</f:facet>
+            #{myvariable.customer_id}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Müşteri Adı</f:facet>
+            #{myvariable.name}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Alınan Ürün</f:facet>
+            #{myvariable.description}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Alınan Adet</f:facet>
+            #{myvariable.quantity}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Sipariş Tarihi</f:facet>
+            #{myvariable.sales_date}
+        </h:column>
+
+    </h:dataTable>
+    <h:form>
+        <h:commandButton value="Geri" action="index"/>
+    </h:form>
+</h:body>
+</html>

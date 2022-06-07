@@ -1,28 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <!-- addentry.html -->
- <!-- Form for adding an entry to an address book -->
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
- <html xmlns="http://www.w3.org/1999/xhtml"
+<!-- Form for adding an entry to an address book -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
 xmlns:h="http://java.sun.com/jsf/html">
- <h:head>
- <title>Kitap Bul</title>
-  </h:head>
- <h:body>
- <h3>Kitap Arama</h3>
- <h:form>
-     <h:panelGrid columns="1">
-<h:outputText value="Kitabın İsmi:"/>
- <h:inputText id="isim" required="true"
- requiredMessage="Kitabın ismini giriniz"
- value="#{kitapBean.bulunacak_kitap}" />
-   <h:commandButton value="Bul"
-                  action="kitapbul1"/>
-  
-<h:outputLink value="index.xhtml">Ana Sayfa</h:outputLink>
- </h:panelGrid>
- </h:form>
+<h:head>
+    <title>Kitap Bul</title>
+</h:head>
+<h:body>
+    <h3>Kitap Arama</h3>
+    <h:form>
+        <h:panelGrid columns="1">
+            <h:outputText value="Kitabın İsmi:"/>
+            <h:inputText id="isim" required="true"
+                requiredMessage="Kitabın ismini giriniz"
+                value="#{kitapBean.bulunacak_kitap}" />
+            <h:commandButton value="Bul"
+                action="kitapbul1"/>
+
+            <h:outputLink value="index.xhtml">Ana Sayfa</h:outputLink>
+        </h:panelGrid>
+    </h:form>
  
- </h:body>
- </html>
+</h:body>
+</html>

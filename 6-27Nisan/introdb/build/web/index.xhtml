@@ -1,52 +1,52 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <!-- index.html -->
- <!-- Displays an h:dataTable of the addresses in the address book -->
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
- <html xmlns="http://www.w3.org/1999/xhtml"
- xmlns:h="http://java.sun.com/jsf/html"
- xmlns:f="http://java.sun.com/jsf/core">
- <h:head>
- <title>SQL Samples</title>
- </h:head>
-    
- <h:body>
- <h1>SQL Samples</h1>
- <!-- Veritabanından veri çekmek için datatable tag'i kullanılır.Burada datatable'da kullanılan değişken (sample1), Java dosyasında SQL komutu sonucu döndüren bir tablo olmalıdır-->
- <!-- myvariable isminde bir değişken tanımladık.-->
- <h:dataTable value="#{samples.sample1}" var="myvariable" border="1" cellpadding="5" cellspacing="0">
-    <!-- Her h:column bloğu bir döngüyü ifade eder. Tablodaki o column(field)'daki tüm kayıtlar alınınca diğer column'a geçer-->
-    <!-- Java dosyasında yazdığımız SQL komutu ile dönen sonuç tablosundan sadece tek bir kolonu sayfamızda göstermek istediğimizden yalnızca bir h:column tanımladık -->
-    <h:column>
-<f:facet name="header">Ortalama Kargo Ücreti</f:facet> <!--Sayfada kullanmak istediğimiz başlıktır-->
-#{myvariable.ortalama_kargo_ucreti}<!--Buradaki ortalama_kargo_ucreti SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
-</h:column>
- </h:dataTable>
- <br> </br>
- 
- <!-- Diğer sorgumuz-->
-  <!-- burada datatable'da kullanılan değişken (sample2), Java dosyasında SQL komutu sonucu döndüren bir tablo olmalıdır-->
- <h:dataTable value="#{samples.sample2}" var="myvariable"
-border="1" cellpadding="5" cellspacing="0">
-    <!-- Her h:column bloğu bir döngüyü ifade eder. Tablodaki o column(field)'daki tüm kayıtlar alınınca diğer column'a geçer--> 
-    <!-- Java dosyasında yazdığımız SQL komutu ile dönen  tablodan üç tane kolonu sayfamızda göstermek istediğimizden üç tane h:column tanımladık -->
-<h:column>
-<f:facet name="header">Sipariş Numarası</f:facet>
-#{myvariable.order_num}  <!--Buradaki order_num SQL komutu ile dönen tablonun bir sütunu olmalı-->
-</h:column>
-    <h:column>
-<f:facet name="header">Müşteri Numarası</f:facet>
-#{myvariable.customer_id} <!--Buradaki customer_id SQL komutu ile dönen tablonun bir sütunu olmalı-->
-</h:column>
-    <h:column>
-<f:facet name="header">Ürün No</f:facet>
-#{myvariable.product_id} <!--Buradaki product_id SQL komutu ile dönen tablonun bir sütunu olmalı-->
-</h:column>
- </h:dataTable>
-   
+<!-- Displays an h:dataTable of the addresses in the address book -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>SQL Samples</title>
+</h:head>
 
- 
- </h:body>
- </html>
+<h:body>
+    <h1>SQL Samples</h1>
+    <!-- Veritabanından veri çekmek için datatable tag'i kullanılır.Burada datatable'da kullanılan değişken (sample1), Java dosyasında SQL komutu sonucu döndüren bir tablo olmalıdır-->
+    <!-- myvariable isminde bir değişken tanımladık.-->
+    <h:dataTable value="#{samples.sample1}" var="myvariable" border="1" cellpadding="5" cellspacing="0">
+        <!-- Her h:column bloğu bir döngüyü ifade Seder. Tablodaki o column(field)'daki tüm kayıtlar alınınca diğer column'a geçer-->
+        <!-- Java dosyasında yazdığımız SQL komutu ile dönen sonuç tablosundan sadece tek bir kolonu sayfamızda göstermek istediğimizden yalnızca bir h:column tanımladık -->
+        <h:column>
+            <f:facet name="header">Ortalama Kargo Ücreti</f:facet> <!--Sayfada kullanmak istediğimiz başlıktır-->
+            #{myvariable.ortalama_kargo_ucreti}<!--Buradaki ortalama_kargo_ucreti SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
+        </h:column>
+    </h:dataTable>
+    <br> </br>
+    S
+    <!-- Diğer sorgumuz-->
+    <!-- burada datatable'da kullanılan değişken (sample2), Java dosyasında SQL komutu sonucu döndüren bir tablo olmalıdır-->
+    <h:dataTable value="#{samples.sample2}" var="myvariable"
+        border="1" cellpadding="5" cellspacing="0">
+        <!-- Her h:column bloğu bir döngüyü ifade eder. Tablodaki o column(field)'daki tüm kayıtlar alınınca diğer column'a geçer--> 
+        <!-- Java dosyasında yazdığımız SQL komutu ile dönen  tablodan üç tane kolonu sayfamızda göstermek istediğimizden üç tane h:column tanımladık -->
+        <h:column>
+            <f:facet name="header">Sipariş Numarası</f:facet>
+            #{myvariable.order_num}  <!--Buradaki order_num SQL komutu ile dönen tablonun bir sütunu olmalı-->
+        </h:column>
+        
+        <h:column>
+            <f:facet name="header">Müşteri Numarası</f:facet>
+            #{myvariable.customer_id} <!--Buradaki customer_id SQL komutu ile dönen tablonun bir sütunu olmalı-->
+        </h:column>
+        
+        <h:column>
+            <f:facet name="header">Ürün No</f:facet>
+            #{myvariable.product_id} <!--Buradaki product_id SQL komutu ile dönen tablonun bir sütunu olmalı-->
+        </h:column>
+    </h:dataTable>
+
+</h:body>
+</html>
 

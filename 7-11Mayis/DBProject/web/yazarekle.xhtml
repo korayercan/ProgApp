@@ -4,36 +4,36 @@
  <!-- Form for adding an entry to an address book -->
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
- <html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:h="http://java.sun.com/jsf/html">
- <h:head>
- <title>Yazar Ekleme</title>
-  </h:head>
- <h:body>
- <h3>Yazar Ekleme</h3>
- <h:form>
-     <h:panelGrid columns="2">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Yazar Ekleme</title>
+</h:head>
+<h:body>
+    <h3>Yazar Ekleme</h3>
+    <h:form>
+        <h:panelGrid columns="2">
 
- <h:outputText value="Ad:"/>
- <h:inputText id="ad" required="true"
- requiredMessage="Yazarın adını giriniz"
- value="#{yazarBean.ad}" />
- 
- <h:outputText value="Soyad:"/>
- <h:inputText id="soyad" required="true"
- requiredMessage="Yazarın soyadını giriniz"
- value="#{yazarBean.soyad}" />
- 
- <h:outputText value="Doğum Tarihi:"/>
- <h:inputText id="dog"  value="#{yazarBean.dogum_tarihi}" />
- 
- 
-  <h:commandButton value="Ekle"
-                  action="#{yazarBean.ekle()}"/>
- 
- 
-<h:outputLink value="index.xhtml">Ana Sayfa</h:outputLink>
- </h:panelGrid>
- </h:form>
- </h:body>
- </html>
+            <h:outputText value="Ad:"/>
+            <h:inputText id="ad" required="true"
+                requiredMessage="Yazarın adını giriniz"
+                value="#{yazarBean.ad}" />
+
+            <h:outputText value="Soyad:"/>
+            <h:inputText id="soyad" required="true"
+                requiredMessage="Yazarın soyadını giriniz"
+                value="#{yazarBean.soyad}" />
+
+            <h:outputText value="Doğum Tarihi:"/>
+            <h:inputText id="dog"  value="#{yazarBean.dogum_tarihi}" />
+
+
+            <h:commandButton value="Ekle"
+                action="#{yazarBean.ekle()}"/>
+
+
+            <h:outputLink value="index.xhtml">Ana Sayfa</h:outputLink>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>
