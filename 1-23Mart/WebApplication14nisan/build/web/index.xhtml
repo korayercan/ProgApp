@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head> </h:head>
+    <h:body>
+    	<h1>JSF 2 button and commandButton example</h1>
+    	<h:form>
+             <h:inputText id="firstNameInputText" value="#{user.a}"/>
+    	<ol>
+    <!--submit is the default type.Action is used with only submit-->
+	 <li>
+	   <h:commandButton value="submit" type="submit" action="#{user.goLoginPage()}" />
+	 </li>
+	 <li>
+	   <h:commandButton value="reset" type="reset" />
+	 </li>
+	 <li>
+	    <h:commandButton value="commandButton with action type is:button" type="button" action="#{user.goLoginPage()}"/>
+	 </li>
+         <li>
+	    <h:commandButton value="commandButton with action type is:submit" type="submit" action="#{user.goLoginPage()}"/>
+	 </li>
+	 <li>
+	    <h:commandButton value="commandButton Click Me" type="button" onclick="alert('You pressed the commandbutton');"  />
+	 </li>
+	 <li><h:button value="button with no type" /> </li> <!-- submit olmadığı için set metodları çalışmaz-->
+	 <li>
+	    <h:button value="button Click Me" onclick="alert('You pressed the button');" outcome="login.xhtml" /><!-- submit olmadığı için set metodları çalışmaz-->
+	</li>
+	<li><h:button value="buton with outcome" outcome="login.xhtml" /></li>
+    	</ol> 
+           
+    	</h:form></h:body></html>

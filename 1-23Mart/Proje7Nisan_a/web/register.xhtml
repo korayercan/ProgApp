@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html">
+     <h:head>
+    	<title>JSF Book Preferences</title>
+    </h:head>
+    <h:body>
+        <h:form>
+    	<h3>Your Preferences</h3>
+    	<ol>
+            <li>Your firstname:#{book.firstname} </li>
+            <li>Your lastname:#{book.lastname} </li>
+            <li>Your mail:#{book.mail} </li>
+            <li>Your phone: #{book.phone}</li>
+            <li>Your bookname:#{book.bookname} </li>
+            <li>Your operating system:#{book.operatingsystem} </li>
+                       
+          </ol>
+        <h:button value="Back" outcome="index.xhtml"></h:button>
+        <h:commandButton value="Register" action="register.xhtml"  />
+                </h:form>
+    </h:body>
+</html>

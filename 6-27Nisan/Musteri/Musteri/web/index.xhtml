@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- addentry.html -->
+ <!-- Form for adding an entry to an address book -->
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html">
+ <h:head>
+ <title>Musteri</title>
+  </h:head>
+ <h:body>
+ <h3>Musteri Sipariş Detay</h3>
+ <h:form>
+     <h:panelGrid columns="1">
+<h:outputText value="Müşteri numarasını giriniz:"/>
+<small> (Lütfen sample database içindeki Purchase_Order tablosundan
+    uygun bir Customer_id değeri girin - Örneğin: 1 veya 2 veya 36 gibi)</small>
+ <h:inputText required="true"
+ requiredMessage="Musteri numarasini girmeyi unuttunuz"
+ value="#{musteriler.bulunacak_musteri}" />
+   <h:commandButton value="Bul"
+                  action="musteriindex"/>
+  
+ </h:panelGrid>
+ </h:form>
+ 
+ </h:body>
+ </html>

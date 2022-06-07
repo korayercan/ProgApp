@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- addentry.html -->
+ <!-- Form for adding an entry to an address book -->
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html">
+ <h:head>
+ <title>Address Book: Add Entry</title>
+  </h:head>
+ <h:body>
+ <h1>Address Book: Add Entry</h1>
+ <h:form>
+ <h:panelGrid columns="3">
+ <h:outputText value="First name:"/>
+ <h:inputText id="firstNameInputText" required="true"
+ requiredMessage="Please enter first name"
+ value="#{bean.firstName}" maxlength="30"/>
+ <h:message for="firstNameInputText"/>
+ <h:outputText value="Last name:"/>
+ <h:inputText id="lastNameInputText" required="true"
+ requiredMessage="Please enter last name"
+ value="#{bean.lastName}" maxlength="30"/>
+ <h:message for="lastNameInputText"/>
+ <h:outputText value="Street:"/>
+ <h:inputText id="streetInputText" required="true"
+ requiredMessage="Please enter the street address"
+ value="#{bean.street}" maxlength="150"/>
+ <h:message for="streetInputText" />
+ <h:outputText value="City:"/>
+ <h:inputText id="cityInputText" required="true"
+ requiredMessage="Please enter the city"
+ value="#{bean.city}" maxlength="30"/>
+ <h:message for="cityInputText"/>
+ <h:outputText value="State:"/>
+ <h:inputText id="stateInputText" required="true"
+ requiredMessage="Please enter state"
+ value="#{bean.state}" maxlength="2"/>
+ <h:message for="stateInputText"/>
+<h:outputText value="Zipcode:"/>
+ <h:inputText id="zipcodeInputText" required="true"
+requiredMessage="Please enter zipcode"
+ value="#{bean.zipcode}" maxlength="5"/>
+ <h:message for="zipcodeInputText"/>
+ </h:panelGrid>
+<h:commandButton value="Save Address"
+action="#{bean.save}"/><!--save() metodu insert into SQL komutunu barındırmalı-->
+ </h:form>
+ 
+ <h:outputLink value="index.xhtml">Return to Addresses</h:outputLink>
+ 
+ </h:body>
+ </html>

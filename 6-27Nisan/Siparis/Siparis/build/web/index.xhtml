@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- addentry.html -->
+ <!-- Form for adding an entry to an address book -->
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html">
+ <h:head>
+ <title>Siparis</title>
+  </h:head>
+ <h:body>
+ <h3>Sipariş Bilgileri</h3>
+ <h:form>
+     <h:panelGrid columns="1">
+<h:outputText value="Sipariş numarasını giriniz:"/>
+<small> (Lütfen sample database içindeki Purchase_Order tablosundan
+    uygun bir Order_num değeri girin - Örneğin: 10398005 veya 10398006)</small>
+ <h:inputText required="true"
+ requiredMessage="Siparis numarasini girmeyi unuttunuz"
+ value="#{siparisler.bulunacak_siparis}" />
+   <h:commandButton value="Bul" action="siparisindex"/>
+  
+ </h:panelGrid>
+ </h:form>
+ 
+ </h:body>
+ </html>

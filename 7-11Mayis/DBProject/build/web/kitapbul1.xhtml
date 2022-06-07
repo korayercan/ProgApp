@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- index.html -->
+ <!-- Displays an h:dataTable of the addresses in the address book -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core">
+ <h:head>
+ <title>kitap Bul</title>
+ </h:head>
+ <h:body>
+ <h3>Aradığınız Kitap</h3>
+  <h:dataTable value="#{kitapBean.bul()}" var="myvariable"
+ border="0" cellpadding="10" cellspacing="3" >
+ 
+     <h:column>
+<f:facet name="header">ISBN</f:facet>
+#{myvariable.isbn}
+</h:column>
+ <h:column>
+ <f:facet name="header">Ad</f:facet>
+ #{myvariable.ad}
+  </h:column>
+ <h:column>
+ <f:facet name="header">Yazar Ad</f:facet>
+ #{myvariable.yazar_ad}
+ </h:column>
+     <h:column>
+ <f:facet name="header">Yazar Soyad</f:facet>
+ #{myvariable.yazar_soyad}
+ </h:column>
+ <h:column>
+ <f:facet name="header">Basım Yılı</f:facet>
+ #{myvariable.basim_yili}
+ </h:column>
+ <h:column>
+ <f:facet name="header">Yayın Evi</f:facet>
+ #{myvariable.yayin_evi}
+ </h:column>
+      <h:column>
+          <h:form>
+              <h:commandButton  value="Bu kitabı sil" action="#{kitapBean.sil()}">
+                  <f:setPropertyActionListener target="#{kitapBean.silinecek_isbn}" value="#{myvariable.isbn}" />
+              </h:commandButton>
+           </h:form>
+      </h:column>
+       <h:column>
+          <h:form>
+              <h:commandButton  value="Bu kitabın yazarını sil" action="#{yazarBean.sil()}">
+                  <f:setPropertyActionListener target="#{yazarBean.silinecek_id}" value="#{myvariable.id}" />
+                             </h:commandButton>
+           </h:form>
+      </h:column>
+        
+ </h:dataTable>
+ <h:form>
+      <h:commandButton value="Geri" action="kitapbul"/></h:form>
+ </h:body>
+ </html>

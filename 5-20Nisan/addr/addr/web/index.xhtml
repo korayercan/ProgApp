@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- index.html -->
+ <!-- Displays an h:dataTable of the addresses in the address book -->
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core">
+ <h:head>
+ <title>Address Book</title>
+ </h:head>
+    
+ <h:body>
+ <h1>Address Book</h1>
+ <h:form>
+ <p>
+     <h:commandButton value="Add Entry" action="addentry"/> </p>
+ </h:form>
+ <!-- burada datatable'da kullanılan değişken (addresses), bir tablo (resultset) olmalı veya döndürmelidir-->
+ <h:dataTable value="#{bean.addresses}" var="myvariable"
+border="1" cellpadding="5" cellspacing="0">
+    <!-- Her h:column bloğu bir döngüyü ifade eder. Tablodaki o column(field) bitince diğer column'a geçer--> 
+<h:column>
+<f:facet name="header">First Name</f:facet>
+#{myvariable.FIRSTNAME}<!--Buradaki FIRSTNAME addresses ile dönen sonuç tablosunun (resultset) bir sütunu olmalı-->
+</h:column>
+ 
+    <h:column>
+ <f:facet name="header">Last Name</f:facet>
+#{myvariable.LASTNAME}<!--Buradaki LASTNAME SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
+ </h:column>
+ 
+    <h:column>
+ <f:facet name="header">Street</f:facet>
+#{myvariable.STREET}<!--Buradaki STREET SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
+ </h:column>
+ <h:column>
+ <f:facet name="header">City</f:facet>
+#{myvariable.CITY}<!--Buradaki CITY SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
+ </h:column>
+ <h:column>
+ <f:facet name="header">State</f:facet>
+#{myvariable.STATE}<!--Buradaki STATE SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
+ </h:column>
+<h:column>
+ <f:facet name="header">Zip code</f:facet>
+#{myvariable.ZIP}<!--Buradaki ZIP SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
+ </h:column>
+ </h:dataTable>
+ </h:body>
+ </html>
+

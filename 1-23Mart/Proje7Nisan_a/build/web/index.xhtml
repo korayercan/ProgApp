@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core">
+  <h:head> 
+ <title>Sample Registration Form</title>
+ </h:head>
+ <h:body>
+     <h:form>
+         <h1>Registration Form</h1>
+ <p>Please fill in all fields and click Register</p>
+<h:panelGrid  columns="4" style="height: 196px; width:856px;">
+<h:graphicImage name="fr.png" library="images"/>
+<h:inputText id="firstNameInputText" value="#{book.firstname}"/>
+<h:graphicImage name="lst.png" library="images"/>
+ <h:inputText id="lastNameInputText" value="#{book.lastname}"/>
+ <h:graphicImage name="mail.png" library="images"/>
+ <h:inputText id="emailInputText" value="#{book.mail}"/>
+ <h:graphicImage name="ph.png" library="images"/>
+ <h:inputText id="phoneInputText" value="#{book.phone}"/>
+</h:panelGrid>
+<h:graphicImage name="publications.png" library="images"/>
+ <p>Which book would you like information about?</p>
+<h:selectOneMenu id="booksSelectOneMenu" value="#{book.bookname}">
+<f:selectItem itemValue="CHTP"
+itemLabel="C How to Program" />
+<f:selectItem itemValue="CPPHTP" 
+ itemLabel="C++ How to Program" />
+ <f:selectItem itemValue="IW3HTP"
+ itemLabel="Internet &amp; World Wide Web How to Program" />
+<f:selectItem itemValue="JHTP"
+ itemLabel="Java How to Program" />
+ <f:selectItem itemValue="VBHTP"
+ itemLabel="Visual Basic How to Program" />
+ <f:selectItem itemValue="VCSHTP"
+ itemLabel="Visual C# How to Program" />
+</h:selectOneMenu>
+<p><h:outputLink value="http://www.deitel.com">
+ Click here to learn more about our books
+ </h:outputLink></p>
+<h:graphicImage name="os.png" library="images"/>
+<h:selectOneRadio id="osSelectOneRadio" 
+                  value="#{book.operatingsystem}" >
+    <f:selectItem  itemValue="WinVista" itemLabel="Windows Vista" />
+ <f:selectItem itemValue="Win7" itemLabel="Windows 7"  />
+ <f:selectItem itemValue="OSX" itemLabel="Mac OS X"/>
+ <f:selectItem itemValue="Linux" itemLabel="Linux"/>
+ <f:selectItem itemValue="Other" itemLabel="Other"/>
+</h:selectOneRadio>
+<h:commandButton value="Register" action="register.xhtml"  />
+</h:form></h:body></html>
+

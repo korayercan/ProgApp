@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- addentry.html -->
+ <!-- Form for adding an entry to an address book -->
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html">
+ <h:head>
+ <title>Kitap Ekleme</title>
+  </h:head>
+ <h:body>
+ <h3>Kitap Ekleme</h3>
+ <h:form>
+ <h:panelGrid columns="2">
+<h:outputText value="ISBN:"/>
+ <h:inputText id="isbn" required="true" requiredMessage="ISBN giriniz"
+ value="#{kitapBean.isbn}" />
+ <h:outputText value="Ad:"/>
+ <h:inputText id="ad" required="true"
+ requiredMessage="Kitap ismi giriniz"
+ value="#{kitapBean.ad}" />
+ <h:outputText value="Yazar ID:"/>
+ <h:inputText id="yid" required="true"
+ requiredMessage="Yazarın id sini giriniz"
+ value="#{kitapBean.yazar_id}"/>
+  <h:outputText value="Basim Yili:"/>
+  <h:inputText id="yil"  required="true"
+ requiredMessage="Basım yılını giriniz"
+               value="#{kitapBean.basim_yili}" />
+ <h:outputText value="Yayın Evi"/>
+ <h:inputText id="yevi" value="#{kitapBean.yayin_evi}" />
+  <h:commandButton value="Ekle"
+                  action="#{kitapBean.ekle()}"/>
+ 
+ 
+<h:outputLink value="index.xhtml">Ana Sayfa</h:outputLink>
+ </h:panelGrid>
+ </h:form>
+ </h:body>
+ </html>

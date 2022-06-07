@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>JSF tutorial</title>		   
+   </h:head>
+   <h:body> 
+      <h2>actionListener Examples</h2>
+      <h:form>
+      <h2>Method Binding</h2>
+      <hr/>
+      <h:commandButton id="submitButton1" value="First Submit" action="#{userData.showResult}"
+         actionListener="#{userData.updateData}" >
+      </h:commandButton>
+      <h2>ActionListener interface</h2>
+      <hr/>
+      <!--in button or link component, add a “f:actionListener” tag inside, 
+      and specified an implementation class of ActionListener interface, and override its processAction().-->
+      <h:commandButton id="submitButton2" 
+         value="Second Submit" action="#{userData.showResult}" >
+         <f:actionListener type="ClassA" />
+      </h:commandButton>
+      </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- index.html -->
+ <!-- Displays an h:dataTable of the addresses in the address book -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core">
+ <h:head>
+ <title>Musteri</title>
+ </h:head>
+ <h:body>
+ <h3>Musteri Sipariş Detay</h3> 
+ <small> (Lütfen gelen verilerin doğruluğunu Netbeans sample veritabanına gidip Purchase_Order tablosundan
+    kontrol ediniz)</small>
+ <!--bul() metodu resultset dönmelidir-->
+   <h:dataTable value="#{musteriler.bul()}" var="myvariable"
+ border="1" cellpadding="10" cellspacing="3" >
+ 
+     <h:column>
+<f:facet name="header">Müşteri No</f:facet>
+#{myvariable.customer_id}<!--Buradaki customer_id SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
+</h:column>
+
+ <h:column>
+ <f:facet name="header">Sipariş Bazında Aldığı Maksimum Ürün Sayısı</f:facet>
+ #{myvariable.max_quantity}<!--Buradaki max_quantity SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
+ </h:column>
+ 
+   <h:column>
+ <f:facet name="header">Tüm Siparişlerinden Aldığı Toplam Ürün Sayısı</f:facet>
+ #{myvariable.sum_quantity}<!--Buradaki sum_quantity SQL komutu ile dönen sonuç tablosunun bir sütunu olmalı-->
+ </h:column>
+      
+ </h:dataTable>
+ <h:form>
+      <h:commandButton value="Geri" action="index"/></h:form>
+ </h:body>
+ </html>
